@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="results" type="resultsType"/>
+    <xs:complexType name="resultsType">
+        <xs:sequence>
+            <xs:element name="student" type="studentType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="studentType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="rollno" type="xs:integer"/>
+            <xs:element name="subjects" type="subjectsType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="subjectsType">
+        <xs:sequence>
+            <xs:element name="subject" type="subjectType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="subjectType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="score" type="xs:integer"/>
+            <xs:element name="credit" type="xs:integer"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
